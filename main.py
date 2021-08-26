@@ -18,7 +18,7 @@ data = responce.text
 soup = BeautifulSoup(data, "html.parser")
 time.sleep(30)
 name = soup.find(class_="login")
-print(name.text)
+print(name.getText())
 
 
 
