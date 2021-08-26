@@ -1,5 +1,8 @@
 import requests
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 import os
 import time
 #from bs4 import BeautifulSoup
@@ -14,8 +17,7 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
 
-time.sleep(12)
-name = driver.find_element_by_class_name("signupFormTitle")
+name = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="signupFormEmailInput"]')))
 print(name.text)
 
 
