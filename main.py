@@ -13,7 +13,7 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 driver.get("https://cutt.ly/KWecMLq")
 time.sleep(8)
-name = driver.find_element_by_xpath('//*[@id="search-page-react-content"]/section/div[3]/div[1]/button/text()')
+name = driver.find_element_by_id("listing-type")
 print(name)
 
 
