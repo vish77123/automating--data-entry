@@ -19,7 +19,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 wait = WebDriverWait(driver, 10)
 driver.get('https://ysense.com/')
 name = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="signupFormEmailInput"]')))
-print(name)
+print(name.text)
 
 
 
