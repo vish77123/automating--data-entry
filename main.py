@@ -17,7 +17,7 @@ responce = requests.get(url="https://ysense.com/")
 data = responce.text
 soup = BeautifulSoup(data, "html.parser")
 time.sleep(30)
-name = soup.find(class_="login")
+name = soup.find(class_="signupFormTitle")
 print(name)
 
 
