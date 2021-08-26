@@ -15,7 +15,7 @@ chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
-wait = WebDriverWait(driver, 10)
+wait = WebDriverWait(driver, 2)
 driver.get("https://cutt.ly/KWecMLq")
 
 
