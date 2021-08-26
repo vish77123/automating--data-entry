@@ -12,7 +12,7 @@ def run():
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get("https://cutt.ly/KWecMLq")
-    time.sleep(3)
+    time.sleep(30)
     name = driver.find_element_by_id("listing-type")
     print(name.text)
 
