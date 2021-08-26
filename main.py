@@ -15,7 +15,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 
 
 time.sleep(12)
-name = driver.find_element_by_class_name(class_="signupFormTitle")
+name = driver.find_element_by_class_name("signupFormTitle")
 print(name.text)
 
 
