@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Day-47 Amazon BOT/.idea/Day-47 Amazon BOT.iml" filepath="$PROJECT_DIR$/../Day-47 Amazon BOT/.idea/Day-47 Amazon BOT.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Day-53 zillow.iml" filepath="$PROJECT_DIR$/.idea/Day-53 zillow.iml" />
     </modules>
   </component>
