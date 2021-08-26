@@ -12,7 +12,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-driver.get("ysense.com")
+driver.get("https://ysense.com/")
 time.sleep(30)
 name = driver.find_element_by_xpath('//*[@id="main-header-menu"]/ul/li[1]/a')
 print(name.text)
