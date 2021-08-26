@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import os
 import time
-from bs4 import BeautifulSoup
+
 
 
 chrome_options = webdriver.ChromeOptions()
@@ -18,14 +18,14 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 wait = WebDriverWait(driver, 10)
 driver.get("https://cutt.ly/KWecMLq")
 
-soup = BeautifulSoup(driver.page_source, "html.parser")
-price = soup.find_all(class_="list-card-price")
-addrs = soup.find_all(class_="list-card-addr")
-link = soup.select(".list-card-info a")
+
+price = wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "list-card-price")))
+addrs = wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "list-card-addr")))
+link = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".list-card-info a")))
 data =[]
 dic = {}
 for i in range (len(price)):
-    href = link[i]["href"]
+    href = link[i].get_attribute('href')
     if "http" not in href :
         href = f"https://www.zillow.com{href}"
 
