@@ -3,3 +3,4 @@ beautifulsoup4==4.9.3
 selenium==3.141.0
 urllib3==1.25.10
 PyVirtualDisplay==2.2
+requests==2.26.0
